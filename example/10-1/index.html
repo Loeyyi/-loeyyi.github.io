@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+     <head>
+     	<title>Example 10-1</title>
+     	<meta charset="utf-8">
+     	<script>
+     		for(let i=0; i<5; i++) {
+     			console.log(i);
+     		}
+
+     		function showMenuItems(event) {
+     			event.stopPropagation();
+     			let menuItems = document.querySelectorAll('div:not(:first-of-type)');
+     			for(let i=0; i<menuItems.length; i++){
+     				let item = menuItems[i];
+     				item.style.display = 'inline-block';
+     			}
+     		}
+
+     		function hideMenuItems() {
+     			let menuItems = document.querySelectorAll('div:not(:first-of-type)');
+     			for(let i=0; i<menuItems.length; i++){
+     				let item = menuItems[i];
+     				item.style.display = 'none';
+     			}
+     		} 
+
+     		window.onload = function() {
+     			let divs = document.getElementsByTagName('div');
+     			divs[0].addEventListener('click', showMenuItems);
+     			document.addEventListener('click', hideMenuItems);
+     		};
+     	</script>
+     	<style>
+     		div {
+     			display: inline-block;
+     			padding: 0;
+     			width: 100px;
+     			height: 100px;
+     			line-height: 100px;
+     			color: white;
+     			text-align: center;
+     		}
+     		div:first-of-type {
+     			background-color: darkred;
+     			cursor: pointer;
+     		}
+     		div:not(:first-of-type){
+     			display: none;
+     			background-color: darkblue;
+     		}
+     	</style>
+     </head>
+     <body>
+     	<div>Menu</div>
+     	<div>Item 1</div>
+     	<div>Item 2</div>
+     	<div>Item 3</div>
+     	<div>Item 4</div>
+     	<div>Item 5</div>
+     </body>
+     </html>

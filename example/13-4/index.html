@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+      <head>
+      	<meta charset="utf-8">
+      	<title>Example 13-4</title>
+            <style>
+              div {
+                height: 50px;
+                width: 100px;
+                background-color: red;
+                animation: changeLength 1s linear infinite alternate;
+              }
+
+              div:nth-of-type(2){
+                animation: crazyChangeLength 1s linear infinite alternate;
+              }
+
+              @keyframes changeLength {
+                from {
+                  width: 100px;
+                }
+                to{
+                  width: 500px;
+                }
+              }
+
+              @keyframes crazyChangeLength {
+                0% {
+                  width:100px;
+                }
+                10%{
+                  width:150px;
+                }
+                70%{
+                  width:50px;
+                }
+                100%{
+                  width:500px;
+                }
+              }
+            </style>
+      </head>
+      <body>
+        <div></div>
+        <div></div>
+      </body>
+</html>

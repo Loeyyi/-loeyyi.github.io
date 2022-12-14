@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+	<head>
+		<title>Example 10-3</title>
+		<meta charset="utf-8">
+		<script>
+			/* A function created to show/hide all the items inside 
+			   every <div> in <nav>.
+			*/
+			function showHideItems () {
+				// Get the ID of the clicked <div> in <nav>
+				let menuId = this.id;
+				/* Create a selector for extracting all <p>s from 
+				   the clicked <div> with a specific ID. Depending on what
+				   "menuId" is, the selector could be
+				   "div#menu1 > p", "div#menu2 > p", or "div#menu3 > p". */
+				let selector = 'div#' + menuId + ' > p';
+				// Use the selector to get all menu items inside a specific <div>
+				let allMenuItems = document.querySelectorAll(selector);
+				/* Check if the first menu item has its "display" property set to
+				   "block". (You only need to check the first item since all items
+				   would have the same "display" setting).
+				*/
+				if(allMenuItems[0].style.display === 'block') {
+					/* If "true", it means the current menu is "open", so do the 
+					   opposite to set all items of the current menu to have
+					   "display" as "none" and hide these items. */
+					for(let i=0 ; i<allMenuItems.length ; i++) {
+						let item = allMenuItems[i];
+						item.style.display = 'none';
+					}
+				}
+				else {
+					/* If "false", it means the current menu is "closed", so do the
+					   opposite to set all items of the current menu to have "display"
+					   as "block" and show these items.
+					 */
+					for(let i=0 ; i<allMenuItems.length ; i++) {
+						let item = allMenuItems[i];
+						item.style.display = 'block';
+					}
+				}
+			}
+
+			window.onload = function () {
+				// Just bind every single <div> inside <nav> to the "click"
+				// event, which triggers the "showHideItems" function.
+				let allMenuDIVs = document.querySelectorAll('nav > div');
+				for(let i=0 ; i<allMenuDIVs.length ; i++) {
+					let menu = allMenuDIVs[i];
+					menu.addEventListener('click', showHideItems);
+				}
+			}
+		</script>
+		<style>
+			nav {
+				width: 20%;
+				font-size: 150%;
+			}
+
+			nav > div {
+				background-color: red;
+				color: white;
+				text-align: center;
+				cursor: pointer;
+			}
+
+			nav > div > p {
+				display: none;
+				margin: 0;
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<div id="menu1">
+				Menu 1
+				<p>
+					Item 1
+				</p>
+				<p>
+					Item 2
+				</p>
+			</div>
+			<div id="menu2">
+				Menu 2
+				<p>
+					Item 1
+				</p>
+				<p>
+					Item 2
+				</p>
+			</div>
+			<div id="menu3">
+				Menu 3
+				<p>
+					Item 1
+				</p>
+				<p>
+					Item 2
+				</p>
+			</div>
+		</nav>
+	</body>
+</html>

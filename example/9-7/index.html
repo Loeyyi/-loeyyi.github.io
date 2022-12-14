@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+	<head>
+		<title>Example 9-7</title>
+		<meta charset="utf-8">
+		<script>
+			/* To allow your webpage to have some real interactions with users, you need to know how to handle
+			   "events" in JS. That is, when users scroll the viewport up/down, click on some elements, move the
+			   mouse cursor over some elements, etc., the webpage will take some action.
+			*/
+
+			/* Here we first create a function that will pop up a message, which is only executed when users
+			   take some action in the webpage.
+			*/
+			function popUpMsg () {
+				alert('Hello!');
+			}
+
+			window.onload = function () {
+				/* We want to bind the above "popUpMsg" function to a specific HTML element, which is the
+				   only <button> in this HTML document. Since we are using "getElementsByTagName" here,
+				   the returned data is still an array, although there's only one <button> element in the array.
+				*/
+				let button = document.getElementsByTagName('button');
+				/* Take the only <button> from the array, and the <button> object has a function "addEventLister"
+				   for our goal. The function takes two data entries - the first one is a string specifying the
+				   event type that the element will listen to, and here it is "click". The second data entry is the
+				   function that would be executed when a clicking event occurs with the <button> element, which is
+				   the "popUpMsg" function that we created early in this script. With this statement, we have now
+				   successfully bound the "popUpMsg" function to the only <button> element via a clicking event.
+				*/
+				button[0].addEventListener('click', popUpMsg);
+			};
+		</script>
+	</head>
+	<body>
+		<h1>JavaScript Tutorials</h1>
+		<button>Pop up!</button>
+	</body>
+</html>

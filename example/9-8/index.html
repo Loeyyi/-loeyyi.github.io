@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+	<head>
+		<title>Example 9-8</title>
+		<meta charset="utf-8">
+		<script>
+			// A function that pops up a message whenever it is executed.
+			function popUpMsg () {
+				alert('Hey!');
+			}
+
+			/* A function that removes the event listener bounded to 
+			   the FIRST <button> element (i.e., the "Hey!" button), which
+			   monitors a "clicking" event and executes the "popUpMsg" function.
+			*/
+			function stopHey () {
+				let button = document.getElementsByTagName('button');
+				/* "removeEventListener" receives two data entries:
+				   The first one specifies the event, and the second one
+				   specified the function bounded to the event.
+				 */
+				button[0].removeEventListener('click', popUpMsg);
+			}
+
+			/* A special function that is designed to remove its binding to
+			   the element that executes it. */
+			function heyOnce () {
+				alert('Hey!');
+				/* In this context, the keyword "this" corresponds to the 
+				   HTML element that initiates its execution. In this example,
+				   "this" corresponds to the third button (i.e., "Hey Once!") in
+				   the codes below. So, after the third button is clicked, this
+				   function is executed, which then removes the binding between
+				   the third button, a clicking event, and the "heyOnce" function.
+				   Consequently, the "Hey Once!" button can only trigger this 
+				   function once.
+				*/
+				this.removeEventListener('click', heyOnce);
+			}
+
+			window.onload = function () {
+				let button = document.getElementsByTagName('button');
+				// Bind each of the three <button>s to one of the above functions
+				// after the HTML document is fully loaded.
+				button[0].addEventListener('click', popUpMsg);
+				button[1].addEventListener('click', stopHey);
+				button[2].addEventListener('click', heyOnce);
+			};
+		</script>
+	</head>
+	<body>
+		<h1>JavaScript Tutorials</h1>
+		<button>Hey!</button>
+		<button>Stop Hey!</button>
+		<button>Hey Once!</button>
+	</body>
+</html>

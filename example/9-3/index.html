@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+	<head>
+		<title>Example 9-3</title>
+		<meta charset="utf-8">
+		<script>
+			/* To interact with an HTML document using JS, we will need to frequently refer to the
+			   "document" key of the "window" object, which contains EVERYTHING about the HTML document.
+			   In the following line, we can get the "title" of this document, which is "Example 9-3".
+			 */
+			var siteTitle = window.document.title;
+			console.log(siteTitle);
+			/* Because it is just too frequent that we will refer to the "document" key, JS allows us to
+			   omit "window" when referring the entire HTML document.
+			*/
+			var siteTitle_2 = document.title; // Same output
+			console.log(siteTitle_2);
+
+			/* Try to extract some elements from the document. Once again, it's safer to do it in a function
+			   assigned to "window.onload", so the HTML structure is fully loaded for you to find some elements.
+			*/
+			window.onload = function() {
+				/* "getElementsByTagName" is a built-in function of the "document" object, which find HTML elements
+				   based on the name of a tag passed to it. As the name "Elements" suggests, the function returns
+				   one or more elements stored in an array.
+				*/
+				let allDivs = document.getElementsByTagName('div');
+				/* There are three <div>s in <body>, so you will have an array of three objects representing
+				   each of the three <div>s.
+				*/
+				console.log(allDivs);
+				/* To get one of the three <div>s from the array, specify the index number of the array! */
+				console.log(allDivs[0]);
+				/* There's no <audio> HTML element in <body>, so the returned result is an array of 0 length
+				   (i.e., an empty array)
+				 */
+				let allAudios = document.getElementsByTagName('audio');
+				console.log(allAudios);
+			};
+		</script>
+	</head>
+	<body>
+		<h1>JavaScript Tutorials</h1>
+		<div>Div 1</div>
+		<div>Div 2</div>
+		<div>Div 3</div>
+	</body>
+</html>

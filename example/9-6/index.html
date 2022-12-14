@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+	<head>
+		<title>Example 9-6</title>
+		<meta charset="utf-8">
+		<script>
+			/* As mentioned earlier in this course, when the structure of your HTML document is made
+			   clear by choosing semantically appropriate HTML tags, most of the time you won't need to 
+			   set the "class" or "id" attribute to be able to apply CSS properties correctly based on the
+			   structure of the HTML elements. Likewise, in JS, you could have access to HTML elements
+			   based on their structure along.
+			*/
+			window.onload = function () {
+				/* When you use the "querySelector" function, you could specify the structure of target
+				   elements, just like when you define a CSS selector. The function returns ONLY THE FIRST
+				   MATCH.
+				*/
+				// Get all the <p>s that are an immediate child of <article> and return the first match.
+				let firstEm = document.querySelector('article > p');
+				firstEm.style.cssText = 
+								'background-color: black; color: white;';
+
+				// Get all the <p>s that are an immediate child of <section> and return the first match.
+				let secondEm = document.querySelector('section > p');
+				secondEm.style.cssText = 
+								'background-color: red; color: yellow;';
+
+				//document.querySelectorAll() = for all matches; try it yourself!
+			};
+		</script>
+	</head>
+	<body>
+		<h1>JavaScript Tutorials</h1>
+		<article>
+			<h2>This is an article</h2>
+			<p>This is a paragraph.</p>
+			<section>
+				<h3>This is a section.</h3>
+				<p>
+					This is another paragraph inside a section.
+				</p>
+			</section>
+		</article>
+	</body>
+</html>

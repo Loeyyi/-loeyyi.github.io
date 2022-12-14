@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+	<head>
+		<title>Example 8-7</title>
+		<meta charset="utf-8">
+		<script>
+			// Calculate the ratio of two numbers
+			function calcRatio (largeNum, smallNum) {
+				// Divide a large number by a small number and get the ratio.
+				let ratio = largeNum / smallNum;
+				// Compose a final message with the raw numbers and the calculated ratio.
+				let finalMsg = 'The ratio of ' + largeNum + ':' + smallNum + ' is ' + ratio + ':1.';
+				// Print the final message in the console.
+				console.log(finalMsg);
+			}
+
+			// Calculate the sum of three numbers and the percentage of each of the three numbers
+			function calcPerc (x, y, z) {
+				// Get the sum
+				let sum = x + y + z;
+				// Get the percentages.
+				let xPerc = x / sum * 100;
+				let yPerc = y / sum * 100;
+				let zPerc = z / sum * 100;
+				// Compose a message showing the sum of all three numbers.
+				let sumMsg = 'The sum of ' + x + ', ' + y + ', ' + z + ' is: ' + sum;
+				// Print the sum message
+				console.log(sumMsg);
+				// Compose three messages for each percentage with the raw numbers.
+				let xPercMsg = 'The proportion of ' + x + ' is: ' + xPerc;
+				let yPercMsg = 'The proportion of ' + y + ' is: ' + yPerc;
+				let zPercMsg = 'The proportion of ' + z + ' is: ' + zPerc;
+				// Print the messages
+				console.log(xPercMsg);
+				console.log(yPercMsg);
+				console.log(zPercMsg);
+			}
+
+			// Put both functions into an object, since they both do some
+			// math calculations.
+			var mathFuncs = {
+				calcRatio: calcRatio,
+				calcPerc: calcPerc
+			};
+
+			/* Note that the functions are not called in this script. In my demo,
+			   I called them directly in a browser console. Check the Week 8 Video. */
+		</script>
+	</head>
+	<body>
+		<h1>JavaScript Tutorials</h1>
+	</body>
+</html>

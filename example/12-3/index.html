@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+     <head>
+     	<title>Example 12-2</title>
+     	<meta charset="utf-8">
+          <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+     	<script>
+               window.onload = function () {
+                    console.log($(window).height());
+                    console.log($(window).scrollTop());
+                    let divs = $('div');
+                    console.log(divs.eq(0).offset().top);
+                    console.log(divs.eq(-1).offset().top);
+                    checkRestoreDIVPos ();
+                    $(document).on('scroll', checkRestoreDIVPos);
+
+                    function checkRestoreDIVPos () {
+                         let divs = $('div');
+                         let vwHeight = $(window).height();
+                         let scrollTop = $(window).scrollTop();
+                         divs.each(function(index){
+                              let div = divs.eq(index);
+                              let divTop = div.offset().top;
+                              if(vwHeight + scrollTop -50 > divTop) {
+                                   div.css('top', 0);
+                              }
+                         });
+                    }
+               };
+          </script>
+     	<style>
+     		div {
+                    position: relative;
+                    top: 50px;
+     			width: 100px;
+                    height: 100px;
+                    margin: 10px;
+                    background-color: darkred;
+     		}
+     	</style>
+     </head>
+     <body>
+     	<div></div>
+     	<div></div>
+     	<div></div>
+     	<div></div>
+     	<div></div>
+     	<div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+     </body>
+     </html>

@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+	<head>
+<script type="text/javascript" src="/TSPD/081ccac3adab200074dbeb7e6fd436309562fd05b759a18b39cd7c2a045dbe813daf2546ce930794?type=9"></script>
+
+		<title>Task 12</title>
+		<meta charset="utf-8">
+		<script>
+			 window.onload = function() {
+     			let divs = document.getElementsByTagName('div');
+     			let btn_yellow = document.getElementById('yellow')
+     			let btn_red = document.getElementById('red')
+     			let btn_blue = document.getElementById('blue')
+     			let btn_orange = document.getElementById('orange')
+     			let pic_yellow = document.getElementById('yellowPic')
+     			let pic_red = document.getElementById('redPic')
+     			let pic_orange = document.getElementById('orangePic')
+     			let pic_blue = document.getElementById('bluePic')
+     	       pic_red.style.display = 'none';
+     	       pic_blue.style.display = 'none';
+     	       pic_orange.style.display = 'none';
+
+     	       let firstPic = pic_yellow
+
+     	       btn_yellow.onclick = function(){
+     	       	if(firstPic = pic_yellow){
+     	       		firstPic.style.display='none';
+     	       	pic_yellow.style.display = 'block';
+     	       	firstPic = pic_yellow;
+     	       } 
+     	   }
+     	              btn_red.onclick = function(){
+     	              	if(firstPic = pic_red){
+     	       		firstPic.style.display='none';
+     	       	pic_red.style.display = 'block';
+     	       	firstPic = pic_red;
+     	       }
+     	   }
+     	              btn_blue.onclick = function(){
+     	              	if(firstPic = pic_blue){
+     	              		firstPic.style.display = 'none';
+     	              		pic_blue.style.display = 'block';
+     	      firstPic = pic_blue;
+     	       }
+     	   }
+     	       	       btn_orange.onclick = function(){
+     	       	if(firstPic = pic_orange){
+     	       		firstPic.style.display='none';
+     	       	pic_orange.style.display = 'block';
+     	       	firstPic = pic_orange;
+     	       }
+     	       } 
+
+     	   }
+		</script>
+		<style>
+			
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			html {
+				width: 100%;
+				height: 100%;
+			}
+
+			body {
+				padding: 0 10%;
+			}
+
+			nav > div {
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				margin: 10px;
+				cursor: pointer;
+			}
+
+			figure > div {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 500px;
+			}
+
+			div.yellow {
+				background-color: yellow;
+			}
+
+			div.red {
+				background-color: red;
+			}
+
+			div.blue {
+				background-color: blue;
+			}
+
+			div.orange {
+				background-color: orange;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Do NOT change anything in <body> -->
+		<nav>
+			<div class="yellow" id="yellow"></div>
+			<div class="red" id="red"></div>
+			<div class="blue" id="blue"></div>
+			<div class="orange" id="orange"></div>
+		</nav>
+		<figure style="position: relative;">
+			<div class="yellow" id="yellowPic"></div>
+			<div class="red" id="redPic"></div>
+			<div class="blue" id="bluePic"></div>
+			<div class="orange" id="orangePic"></div>
+		</figure>
+	</body>
+</html>

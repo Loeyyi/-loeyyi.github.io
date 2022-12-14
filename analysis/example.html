@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+    	<title>Expository Essay Analysis: Home</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script src="demo.js"></script>
+        <script>
+            function checkRestoreSecs () {
+                let vpHeight = $(window).height();
+                let scrollTop = $(window).scrollTop();
+                let sections = $('article > section');
+                sections.each(function (index) {
+                    let sectionTop = $(this).offset().top;
+                    if(vpHeight + scrollTop - 100 > sectionTop) {
+                        $(this).css('top', 0);
+                    }
+                });
+            }
+
+            $(document).ready(function () {
+                
+            });
+
+            window.onload = function () {
+                checkRestoreSecs();
+                $(document).on('scroll', checkRestoreSecs);
+                $('nav > a:first-of-type').on('click', showHideMenuItems);
+                $(document).on('click', hideMenuItems);
+            };
+        </script>
+        <style>
+                    span.joint {
+                color: #a6611a;
+            }
+            span.vocab {
+                padding: 0 4px;
+                border-radius: 2px;
+                background-color: #018571;
+                color: white;
+            }
+            span.vocab > span {
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 10px;
+                border-radius: 2px;
+                background-color: #dfc27d;
+                color: #000a16;
+                opacity: 0.9;
+                text-indent: 0;
+            }
+            span.vocab:hover > span {
+                display: block;
+            }
+        </style> 
+    </head>
+    <body>
+        <nav>
+            <a><span style="display: inline-block;">+</span></a>
+            <a href= "index.html">Home</a>
+            <a href="example.html">Essay Example</a>
+            <a href="analysis.html">Structural Analysis</a>
+        </nav>
+        <article>
+            <h1>‘Nothing Has Really Changed’: In Moscow, the Fighting Is a World Away</h1>
+                <p>Sept. 6, 2022 @ The New York Times [<a href="https://www.nytimes.com/2022/09/06/world/europe/moscow-war-ukraine-mood.html" target="_blank">Original article</a>]<br/>
+                By Valerie HopkinsPhotographs by Nanna Heitmann
+                </p>
+                <p><em>Last Updated on Dec 2, 2022</em></p>
+                <figure style="text-align: center;">
+                	<img src="img/NYtimes.jpg" style="max-width:200 vw; vertical-align : middle;" />
+                </figure>
+                <section id="sec1">
+                	<h3>[Sec. #1]</h3>
+                	<p>  MOSCOW — On a recent evening in Red Square,<span class="vocab">a corps of<span><b>"a corps of"</b>- a branch of an army</span></span> elite paratroopers dressed in camouflage performed a battle-like dance with pyrotechnics. An Egyptian performer dressed as a pharaoh rode back and forth in a chariot wielding an ankh, the ancient Egyptian symbol of life, as a band played “Katyusha,” a Soviet-era patriotic war song. <span class="joint">►</span>Nataliya Nikonova, 44, was one of thousands of spectators cheering from the bleachers at a festival celebrating the militaries of Russia and friendly nations including Belarus, India and Venezuela. “I was so thrilled that I just about lost my voice!” she said.<span class="joint">►</span>Russia’s army is now waging a slow-moving war that has left tens of thousands dead and contributed to global inflation and a surge in energy prices.  But Ms. Nikonova said she hadn’t experienced many disruptions to her life in the past six months.“Nothing has really changed,” she said. “Sure, the prices went up, but we can endure that.” She rushed off to listen to an encore of “Katyusha” from the Egyptian Military Symphonic Band.
+                    </p>
+                </section>
+                 <section id="sec2">
+                	<h3>[Sec. #2]</h3>
+                	<p>  Very little about day-to-day life seems to have changed in Moscow, where people have the financial resources to weather significant price increases, unlike much of the rest of the country. GUM, the luxury mall next to Red Square, is full of shoppers — though many Western stores like Prada, Gucci and Christian Dior are closed — and restaurants and theaters do <span class="vocab">thriving business<span><b>"thriving business"</b>- businesses that are very successful and developing well.</span></span>. Moscow’s roads still teem with luxury cars like Lamborghinis and Porsches.<span class="joint">►</span>“A few stores closed because of sanctions, which is frustrating but not that bad,” said Yuliya, 18, a recent high-school graduate who was hanging out on a bench in Gorky Park, where Muscovites sunbathe, dance and rollerblade. She and her friends said they don’t really think about the fighting in Ukraine that often.<span class="joint">►</span>That detachment is exactly what President Vladimir V. Putin is counting on as he executes a domestic strategy of <span class="vocab">shielding<span><b>"shielding"</b>- protect something from danger, risk, or unpleasant experience.</span></span>Russians from the hardships of war — no draft, no mass funerals, no feelings of loss or conflict. Much of Russia’s effort on the battlefield has not gone as Mr. Putin had planned, but at home, he has mostly succeeded in making Russian life feel as normal as possible.</p>
+                	<p>  Most museums and theaters are open, as long as their leadership didn’t criticize the Kremlin, and on summer evenings, party boats with <span class="vocab">effusive<span><b>"effusive"</b>- enthusiastic.</span></span> revelers ply the nearby Moskva River and people picnic in the grass. The fall seasons in opera and ballet have just begun — though a few anticipated premieres and ongoing productions have been canceled after their directors and stars spoke against the war or fled the country.
+                	</p>
+                </section>
+                <section id="sec3">
+                    <h3>[Sec. #3]</h3>
+                    <p>  “What Russians normally do is protect their everyday lives,” said Greg Yudin, a professor of political philosophy at the Moscow School of Social and Economic Sciences, describing a coping mechanism that dates from the Soviet period but became widespread during Mr. Putin’s tenure.“This is the thing that they always prioritize and that they excel at,” he said of Russia’s leadership, “and they are doing that now with a considerable degree of success, I would say.” <span class="joint">►</span>But while many Muscovites embrace revelry and willful ignorance, many of the capital’s <span class="vocab">intelligentsia<span><b>"intelligentsia"</b>-highly educated people.</span></span>, whose work and life tied them to the West or to Ukraine, are struggling to reconcile the feeling of normalcy with the enormity of being engaged in Europe’s biggest land war since World War II.</p>
+                    <p>  That was evident on Saturday in the outpouring of sympathy and appreciation for the former Soviet leader Mikhail S. Gorbachev, expressed by thousands of Russians attending his funeral, who represented a silent protest against Mr. Putin and his policies.<span class="joint">►</span>As soon as Russian tanks rolled into Ukraine, said Anya, she started reading books about the rise of <span class="vocab">totalitarianism<span><b>"totalitarianism"</b>-a form of government that attempts to assert total control over the lives of its citizens.</span></span> in Nazi Germany and grappling with the concept of collective guilt.“It was the end of the world for so many people,” said Anya, 34. Like several others interviewed for this article, she did not want to provide her last name for fear of <span class="vocab">retribution<span><b>"retribution"</b>-punishing someone for their actions.</span></span>.“In your name, someone is killing civilians,’’ she said. “And your country is turning into something like North Korea.”She said she went to a protest and signed an antiwar <span class="vocab">petition<span><b>"petition"</b>-a formal written request.</span></span>, and several days later, she was invited to resign from her job at a public institution.
+                    </p>
+                </section>
+                <section id="sec4">
+                    <h3>[Sec. #4]</h3>
+                    <p>  
+                        For many years, Mr. Putin has been <span class="vocab">cracking down on<span><b>"cracking down on"</b>-to start dealing with bad or illegal behavior in a more severe way.</span></span> dissent and protesters, but today it is almost impossible to express disenchantment with the system, and people expressing their views do so with the knowledge that a new law punishes criticism of the war. Almost 16,500 people have been arrested on charges of protesting the aggression in Ukraine since Feb. 24, according to OVD-Info, a Russian human rights organization.<span class="joint">►</span>Russians who oppose the fighting feel despised and threatened by their government, spurned by the West — which they believe blames them for not protesting the invasion — and powerless to bring about any change.“We all have this feeling of impotence,” said Anya. “The fact that you exist and have your opinion doesn’t mean anything. There are five, 10, 20 million of us. And it doesn’t make any difference.” 
+                    </p>
+                    <p>  
+                        Muscovites like Anya spent the first months after the conflict started anxious and uncertain. Tens of thousands of them fled. But over the summer, the capital largely returned to normal, buoyed by a soaring ruble, a silenced opposition and a news media almost completely under the Kremlin’s control.<span class="joint">►</span>Still, society is changing slowly: While Mr. Putin has sought to infuse a sense of normalcy, he is also working to further militarize Russian society.
+                    </p>
+                </section>
+                <section id="sec5">
+                    <h3>[Sec. #5]</h3>
+                    <p>  
+                        Along Moscow’s artery roads there are billboards of soldiers listing their rank and title, with a QR code to scan for more information. And there is no shortage of events celebrating Russia’s military might.<span class="joint">►</span>Thousands of spectators gathered at the Alabino army training ground southwest of Moscow over two weeks to watch the Army International Games, a festival that includes a Tank Biathlon, in which international teams compete to drive a tank through natural obstacles and fire accurately at targets. (Since 2013, when the competition started, Russia has always come in first place.)“I’ve been seeing tanks on TV for all this time; I wanted to see them in real life,” said Ilya, 34, who drove out to the event from Moscow with his children, 11 and 4.“I think every war is bad; I am not saying I support the ‘Special Military Operation,’ or don’t,” he said, using Mr. Putin’s term for the hostilities in Ukraine. “But I trust the leadership in my country, and if they say it is necessary, then it is.”
+                    </p>
+                    <p>    
+                        Others said that seeing the weapons on display at the army festival — including Kinzhal missiles being used in Ukraine — made them feel as if they had come from a strong country. Andrei Yevgenyevich, 55, who was a tank driver in Soviet-controlled Germany in the last days of the Cold War, said the weapons display brought him back to the days when the Soviet Union was a strong and feared global power. “When you see this, you trust that all is well in your country, that everything is as it should be,” he said. “We were raised in the Soviet tradition, and we love our motherland. This brings pride to our country.” <span class="joint">►</span>As for the <span class="vocab">sanctions<span><b>"sanctions"</b>-a threatened penalty for disobeying a law or rule.</span></span>, he said: “I don’t feel any difference. I think America and the West are suffering far more.” This is a common refrain on Russian television. State-run media produce daily segments about the uncertainty countries like Germany are facing over gas prices and soaring inflation in Europe and the United States. 
+                  </p>
+                  <h3>[Sec. #6]</h3>
+                    <p>  
+                        At the army training grounds, children scrambled over tanks, including one that said, “Smash the Fascists,” and people of all ages shot automatic rifles. But booths inviting visitors to sign a contract to join the army stood empty, save for the recruiters, indicating that even if nationalism is rising, people are not ready to fight Mr. Putin’s war.“Not a lot of people are coming right now,” one military recruiter said, declining to give his name, as the sounds of shots from the nearby firing range could be heard.
+                    </p>
+                     <p>
+                        For people who are uninterested in army games and accustomed to spending their summers traveling around Europe, there are plenty of homegrown distractions. A recent festival in the art park Nikola-Lenivets, a haven for hipsters a few hours from the capital, drew about 16,000 partygoers in the woods over four days. <span class="joint">►</span>One night, people <span class="vocab">decked out<span><b>"decked out"</b>-dressed in a very fancy way.</span></span>in facial glitter, faux-fur coats and even a jellyfish costume danced to the music of an upbeat reggae performer who promised he wouldn’t leave Russia as many other artists had. The crowd went wild.<span class="joint">►</span>“At first I was thinking to myself, wow, there is a war 400 kilometers away, and we are at a music festival,” said Ivan, a 25-year-old who had just returned to his native Russia after several years abroad. He loosened up eventually. “Life goes on, especially when there is nothing we can do to control the situation,” he said. Back at the Red Square festival, a woman named Ekaterina, 26, a brow technician at a beauty salon, said she and her boyfriend, who serves in the military, felt their “spirits raised” by the bands. But she said she was “nervous for the men who are on both sides of the front line.’’ “Here, people act as if nothing is happening. Here is one world, and there,” she said, referring to the field of battle, “is a completely different one.”
+                    </p>
+                </section>
+        </article>
+    </body>
+</html>

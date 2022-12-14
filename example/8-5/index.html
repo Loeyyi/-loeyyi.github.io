@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+	<head>
+		<title>Example 8-5</title>
+		<meta charset="utf-8">
+		<script>
+			// Declare a variable storing an array of 5 numeric values,
+			// which is defined using [], in which every two values are
+			// separated by a comma.
+			var numArray = [1, 5, 2, 11, 7];
+
+			/* To get a value out of an array, you need to specify the 
+			   index number (or, position) of the value in an array. 
+			   The index number begins with 0. */
+			// Get the first value of the array
+			console.log(numArray[0]);
+			// Get the third value of the array
+			console.log(numArray[2]);
+
+			// You can assign a new value to a specific position of an array
+			numArray[1] = 18;
+			console.log(numArray[1]);
+
+			// Just check the entire array
+			console.log(numArray);
+
+			/* JS allows you to mix different types of data in the SAME array,
+			   But this is a BAD PRACTICE, since it's not easy for you to 
+			   recall which position represents which data. */
+			var mixedArray = [1, 'Hello!', 'yes!', 9, 87];
+			/* For example, the "profile" array mixes strings and numbers
+			   together, and you will have to remember "the first position
+			   is the name", "the second position is the affiliation", etc.,
+			   which just does not make much sense. */
+			var profile = ['TY Chen', 'NTHU', 180, 72];
+
+			/* So, a GOOD practice is to use the same array to store the same
+			   type of data, such as the one below used to store multiple phone
+			   numbers. Regardless of whether it is the first, second, or third
+			   number, it always represents a phone number. */
+			var phoneNumbers = [937133678, 95611148, 982282143];
+
+			// It is possible to create an "empty" array...
+			var emptyArray = [];
+			// ...and directly "insert" a value into a specific position.
+			emptyArray[0] = 1;
+			console.log(emptyArray);
+
+			// What if you skip a position when "inserting" a value into an array...?
+			emptyArray[2] = 15;
+			// Check it yourself, but don't do this on a regular basis. In general,
+			// you should not skip any position when inserting a value into an array.
+			console.log(emptyArray);
+		</script>
+	</head>
+	<body>
+		<h1>JavaScript Tutorials</h1>
+	</body>
+</html>

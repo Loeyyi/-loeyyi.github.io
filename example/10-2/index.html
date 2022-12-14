@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+      <head>
+      	<meta charset="utf-8">
+      	<title>Example 10-2</title>
+      	<script>
+      		var num1 = 5, num2 = 10; str='5'; undefinedVar = undefined; 
+                  console.log(num1 > num2); 
+                  console.log(num2 >= num1);
+                  console.log(num1 == str);
+                  console.log(num1 === str);
+                  console.log(num1 !== str);
+                  console.log(!undefinedVar);
+                  console.log(!num1);
+
+                  function filterDIV () {
+                        let input = document.getElementsByTagName('input');
+                        let className = input[0].value;
+                        let matches = document.getElementsByClassName(className);
+                        if(matches.length === 0) {
+                              alert('No match!');
+                        }
+                        else {
+                              let allDIVs = document.getElementsByTagName('div');
+                              for(let i=0; i<allDIVs.length; i++) {
+                                    let div = allDIVs[i];
+                                    div.style.display='none';
+                              }
+                              for(let i=0; i<matches.length; i++) {
+                                    let div = matches[i];
+                                    div.style.display='inline-block';
+                              }
+                        }
+                  }
+
+                  function resetFilter (){
+                        let allDIVs = document.getElementsByTagName('div');
+                        for(let i=0; i<allDIVs.length; i++) {
+                              let div = allDIVs[i];
+                              div.style.display = 'inline-block';
+                        }
+                  }
+
+                  window.onload = function () {
+                        let buttons = document.getElementsByTagName('button');
+                        buttons[0].addEventListener('click', filterDIV);
+                        buttons[1].addEventListener('click', resetFilter);
+                  }
+      	</script>
+            <style>
+                  div {
+                        display: inline-block;
+                        width: 100px;
+                        height: 100px;
+                  }
+
+                  div.red {
+                        background-color: red;
+                  }
+
+                  div.blue {
+                        background-color: blue;
+                  }
+
+                  div.yellow {
+                        background-color: yellow;
+                  }
+            </style>
+      </head>
+      <body>
+            <div class="red"></div>
+            <div class="blue"></div>
+            <div class="red"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="red"></div>
+            <p>
+                  <button>Filter</button>
+                  <button>Reset</button>
+                  <input type="text" placeholder="Enter a class name"/>
+            </p>
+      </body>
+</html>

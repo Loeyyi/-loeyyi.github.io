@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+     <head>
+     	<title>example 4-4</title>
+     	<meta charset="UTF-8">
+     	<style>
+     		nav {
+     			background-color: lightskyblue;
+     		}
+     		nav > a {
+     			font-family: sans-serif;
+     			color: black;
+     			text-decoration: none;
+     		}
+     		nav > a:first-of-type {
+     			font-weight: bold;
+     			cursor: initial;
+     		}
+     		nav > a:not(:first-of-type):hover {
+     			color: white;
+     			font-weight: bold;
+     		}
+     		p > a ::after {
+     			content: '[link]';
+     		}
+     		a {
+     			color: darkblue;
+     			text-decoration: none;
+     		}
+     		a: visited {
+     			color: darkgray;
+     		}
+     	</style>
+     </head>
+     <body>
+     	<nav>
+     		<a href="/">Menu:</a>
+     		<a href="/">Menu Item 1 </a> 
+     		<a href="/">Menu Item 2 </a> 
+     		<a href="/">Menu Item 3 </a> 
+     		<a href="/">Menu Item 4 </a> 
+     	</nav>
+     	<article>
+     		<p><a href="https://google.com">Google</a></p>
+     		<p><a href="https://www.nthu.edu.tw">NTHU</a></p>
+     	</article>
+     </body>
+</html>

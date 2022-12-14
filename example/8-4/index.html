@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+	<head>
+		<title>Example 8-4</title>
+		<meta charset="utf-8">
+		<script>
+			/* In this case, you might also wonder if it also works to call the
+			   function BEFORE it is assigned to a variable. The answer is no.
+			   When you use "var" to declare a variable, only the declaration part
+			   ("var flexibleMsg") is hoisted to the top of a script. Thus, when you
+			   try to call the function below, you will get an error saying 
+			   "flexibleMsg is not a function". This is true because the function is
+			   not assigned to "flexibleMsg" up to this point.*/
+			flexibleMsg('Hi!');
+
+			/* You can also use "var" to create a variable, and define the variable
+			   as a function. */
+			var flexibleMsg = function (str) {
+				let finalMsg = 'Site Message: ' + str;
+				alert(finalMsg);
+			};
+			// Note that declaring a variable using "var" results in "one statement",
+			// which, by default, ends with a semi-colon.
+
+			// Call the function AFTER the function is assigned to a variable, and
+			// send a string to it. But see line 7...
+			flexibleMsg('Hi!');
+		</script>
+	</head>
+	<body>
+		<h1>JavaScript Tutorials</h1>
+	</body>
+</html>

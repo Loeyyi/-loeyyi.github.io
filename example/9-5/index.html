@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+	<head>
+		<title>Example 9-5</title>
+		<meta charset="utf-8">
+		<script>
+			window.onload = function () {
+				/* You could change the visual presentation of an HTML element very easily with JS by assigning a 
+				   new value to a key that represents a CSS property stored in the "style" key of an HTML element
+				   object.
+				*/
+				// Get one specific HTML element
+				let divById = document.getElementById('div3');
+				// Change its font color by assigning a "red" string to the "color" key of "style" of the HTML element.
+				divById.style.color = 'red';
+				/* Change the background color of the same HTML element, too. Note that when the original name of a CSS
+				   property uses hyphens to connect different words of the name together, you will have to remove the
+				   hyphens, and change the first letter of each word in the original CSS property name into an upper case. For example, CSS "background-color" = JS "backgroundColor". */
+				divById.style.backgroundColor = 'gold';
+
+				// Get another specific HTML element and store it into an existing variable (to replace the old content)
+				divById = document.getElementById('div6');
+				/* You can set multiple CSS properties in JS all at once by assigning a string in which CSS properties are
+				   organized following the standard format to the "cssText" key of "style" of the target HTML elements.
+				 */
+				divById.style.cssText = 
+							'background-color: green; color: yellow;';
+				/* Note that setting CSS properties using JS is equivalent of setting the "style" attribute for 
+				   target HTML elements. And if you still remember, this kind of "inline styling" has a high priority
+				   and could overwrite the CSS settings put elsewhere (e.g., in the <style></style> block or in a separate
+				   CSS file).
+				*/
+			};
+		</script>
+	</head>
+	<body>
+		<h1>JavaScript Tutorials</h1>
+		<div class="odd" id="div1">Div 1</div>
+		<div class="even" id="div2">Div 2</div>
+		<div class="odd" id="div3">Div 3</div>
+		<div class="even" id="div4">Div 4</div>
+		<div class="odd" id="div5">Div 5</div>
+		<div class="even" id="div6">Div 6</div>
+	</body>
+</html>

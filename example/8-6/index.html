@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+	<head>
+		<title>Example 8-6</title>
+		<meta charset="utf-8">
+		<script>
+			// If it is bad to mix different data types in an array,
+			// it seems we can only use different variables for data
+			// that have different meanings.
+			var name = 'TY Chen', age = 39, affiliation = 'NTHU';
+
+			// But no, we can actually have a highly structured container
+			// for data that are relevant, which is called an "object"
+			// defined using {} (which is similar to a code block). 
+			var profile = {
+				// In an object, you can define a "key" and its "value",
+				// which is separated with a colon ":". Every two keys
+				// are separated with a comma.
+				name: 'TY Chen',
+				age: 39,
+				affiliation: 'NTHU',
+				height: 180,
+				weight: 72,
+				// You can have an object for a key inside an object, too!
+				contact: {
+					home: 27682149,
+					mobile: [937846567, 911678134, 967856717]
+				}
+			};
+
+			// You can get the value of a key using "object.key".
+			console.log(profile.name);
+			// Or, you can use "object[key]" as well, in which the name of the "key"
+			// is specified with a string.
+			console.log(profile['name']);
+
+			// You can assign a new value to an existing key...
+			profile.name = 'Tsung-Ying Chen';
+			// or you can also create a new key and assign a value to it.
+			profile.gender = 'Male';
+
+			// Check the entire object in your console.
+			console.log(profile);
+
+			// When you reach the "mobile" key of the "contact" key of the "profile"
+			// object, you get an array. Then, with [1], you can get the second value
+			// of the array.
+			console.log(profile.contact.mobile[1]);
+		</script>
+	</head>
+	<body>
+		<h1>JavaScript Tutorials</h1>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+	<head>
+		<title>Example 9-1</title>
+		<meta charset="utf-8">
+		<script>
+			/* The "window" object corresponds to the browser itself and contains many features/properties of the browser. 
+			   For example, the "innerWidth" key stores the width of the viewport. It is "innerWidth" because it only takes
+			   the size "inside" the browser into consideration. Same for "innerHeight". This "window" object is not created
+			   by us but part of the native JavaScript codes.
+			*/
+			var winWidth = window.innerWidth;
+			var winHeight = window.innerHeight;
+			console.log(winWidth);
+			console.log(winHeight);
+
+			/* In the statements below, we try to assign a new string represent the URL of Google to the 
+			   "href" key of the "location" key in the "window" object. The effect is to navigate users
+			   automatically to Google. */
+			//window.location.href = 'https://google.com';
+		</script>
+	</head>
+	<body>
+		<h1>JavaScript Tutorials</h1>
+	</body>
+</html>

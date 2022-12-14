@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+	<head>
+<script type="text/javascript" src="/TSPD/081ccac3adab20001f1fb8c66085bfcc99341fc47bf2758252fd15c26549a3b8ae9b6ba6345c5d88?type=9"></script>
+
+		<title>Task 11</title>
+		<meta charset="utf-8">
+		<style>
+			/* Do not change anything in the CSS settings */
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				text-align: center;
+			}
+
+			div {
+				display: inline-block;
+				color: white;
+				width: 180px;
+				height: 180px;
+				margin: 20px;
+				font-size: 150%;
+				font-family: sans-serif;
+				line-height: 180px;
+				vertical-align: top;
+			}
+		</style>
+		<script>
+			window.onload = function() {
+			document.getElementById('div1').addEventListener("mouseover", function() {
+            document.getElementById('div1').style.backgroundColor = "black";
+             });
+    
+            document.getElementById('div1').addEventListener("mouseout", function() {
+            document.getElementById('div1').style.backgroundColor = "red";
+            });
+			let div2 = document.getElementById('div2');
+			document.getElementById('div2').addEventListener('mouseover', function (event){
+				document.getElementById('div2').style.backgroundColor = 'black';
+			});
+			document.getElementById('div2').addEventListener('mouseout', function (event){
+				document.getElementById('div2').style.backgroundColor = 'green';
+			});
+			}
+		</script>
+	</head>
+	<body>
+		<!-- Do not change anything in <body> -->
+		<div id="div1" style="background-color: red;"></div>
+		<div id="div2" style="background-color: green;"></div>
+	</body>
+</html>

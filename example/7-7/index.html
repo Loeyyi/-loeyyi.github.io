@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+      <head>
+      	<meta charset="utf-8">
+      	<title>Example 7-7</title>
+      	<script>
+      		var x = 5;
+                  var y = 10; //an alternative way of declaring a variable
+                  console.log(x);
+                  console.log(y);
+
+                  // a code block
+                  {
+                        // Hoisting - MOved to the top of the script
+                        var chName = 'Shaing-Yi Liao'; // this variable is globally accessible
+                        let enName = 'Loey Liao'; this variable is only locally accessible
+                  }
+                  console.log(chName); //ok
+                  console.log(enName); //not ok
+
+                  console.log(studentname); // undefined as the output
+                  var studentname = 'Mike'; // not ok. always define your variable first
+      	</script>
+      </head>
+      <body>
+	<h1>JavaScript Tutorials</h1>
+      </body>
+</html>

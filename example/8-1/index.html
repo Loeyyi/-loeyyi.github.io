@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+	<head>
+		<title>Example 8-1</title>
+		<meta charset="utf-8">
+		<script>
+			// Declare a new variable "num" and assign a numeric value 5 to it.
+			var num = 5;
+			// You can replace the value of a variable after its declaration,
+			// and you don't need to use "var" once again.
+			num = 10;
+			/* The new value of a variable does not have to be the same data type.
+			   For example, you can assign a string to the variable "num", even if
+			   the previous value is numeric. However, this practice is NOT
+			   recommended, because you will get confused very easily with the data
+			   stored in a variable. */ 
+			// num = 'This is a string';
+			// Declare a new variable "str" and assigned a string "5" to it.
+			// Note that a string "5" is different from a numeric value 5.
+			var str = '5';
+			// When you "add" a numeric value 10 and a string "5" together,
+			// you will get "105" as a string, since the numeric value is
+			// converted into a string before being concantenated with "5".
+			console.log(num + str);
+
+			/* On the right side of =, addition applies from left to right,
+			   so "Value: " is attached to 5, which is converted into a string.
+			   The output "Value: 5" is then attached to 10, which is also
+			   converted into a string. */
+			var test1 = 'Value: ' + 5 + 10;
+			// So, the value assigned to "test1" is "Value: 510".
+			console.log(test1);
+
+			/* In this case, multiplying (5 * 10) is processed first as in 
+			   real mathematics, which is then converted into a string before
+			   being concatenated with "Value: ". */
+			var test2 = 'Value: ' + 5 * 10;
+			// So, the value assogned to "test2" is "Value: 50".
+			console.log(test2);
+
+			/* You can only use operators like -, /, * for numeric values.
+			   Thus, the attempt to "substract" a letter "A" from the entire
+			   string "Get rid of A" is bound to fail. */
+			var cantDoThis = 'Get rid of A' - 'A';
+			// You get "NaN" when trying to get the value of the variable,
+			// which means "Not a Number".
+			console.log(cantdothis);
+		</script>
+	</head>
+	<body>
+		<h1>JavaScript Tutorials</h1>
+	</body>
+</html>

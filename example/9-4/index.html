@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+	<head>
+		<title>Example 9-4</title>
+		<meta charset="utf-8">
+		<script>
+			window.onload = function() {
+				/* Another useful function for getting some elements from an HTML document is
+				   "getElementById". Since by default, all HTML elements must have a different ID
+				   attribute value, the function only returns the first HTML element with the specified ID.
+				   This is also implied in its function name - "Element", not "Elements".
+				 */
+				let divById = document.getElementById('div1');
+				console.log(divById);
+				/* If you have a set of HTML elements grouped by the same "class" attribute value,
+				   you could have access to them with the function "getElementsByClassName". Once again,
+				   the name "Elements" suggests that it could return one or more elements, which are stored
+				   in an array, just like "getElementsByTagName".
+				 */
+				let groupDivs = document.getElementsByClassName('even');
+				console.log(groupDivs);
+				console.log(groupDivs[2]);
+
+				/* Once you obtain an HTML element, it would be presented as an object that contains
+				   many properties associated with the object. For example, the <div> element we got
+				   above comes with an "innerHTML" key the stores the HTML codes inside that <div>,
+				   which is initially "Div 1". Once we assign a new string to the "innerHTML" key,
+				   we could change the content of the <div> element. This is a simple example of how we 
+				   change the content of an HTML document.
+				*/
+				divById.innerHTML = 'DIV 1: Changed!';
+				/* Do the same thing for the third member (0->1->2) of the "groupDivs" array. */
+				groupDivs[2].innerHTML = 'DIV 6: Changed!';
+			};
+		</script>
+	</head>
+	<body>
+		<h1>JavaScript Tutorials</h1>
+		<div class="odd" id="div1">Div 1</div>
+		<div class="even" id="div2">Div 2</div>
+		<div class="odd" id="div3">Div 3</div>
+		<div class="even" id="div4">Div 4</div>
+		<div class="odd" id="div5">Div 5</div>
+		<div class="even" id="div6">Div 6</div>
+	</body>
+</html>

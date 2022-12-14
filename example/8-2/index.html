@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+	<head>
+		<title>Example 8-2</title>
+		<meta charset="utf-8">
+		<script>
+			/* By default, a function created using the keyword "function" is "hoisted"
+			   to the top of the script. So, although it looks like that the function
+			   "msg" is called BEFORE the function is created, in reality, the statement
+			   below in line 11 still takes place AFTER the function is created. */
+			msg();
+
+			/* Use the keyword "function" to create a function called "msg".
+			   The parantheses () is part of the syntax, which will be further 
+			   explained below. {} represents the code block of the function. */
+			function msg () {
+				// When the function is called, just pop up this message.
+				alert('This is a message!');
+			}
+
+			/* Normally, you "call" a function in a statement AFTER the function
+			   is created. However...see line 7 above. Without calling the function,
+			   nothing will happen. */
+			msg();
+
+			/* You can create a function the receives some data from where it is called.
+			   In the "flexibleMsg" function below, the one data entry received by the
+			   function will be stored into a variable "str", which can only be used in
+			   this function. */
+			function flexibleMsg (str) {
+				/* The value of "str" is merged with the string "Site message: " and 
+				   then stored into the local variable "finalMsg" created using "let". */
+				let finalMsg = 'Site message: ' + str;
+				// Pop up the final message.
+				alert(finalMsg);
+			}
+
+			// Call the "flexibleMsg" function, and send a string "Hi!" to the function.
+			flexibleMsg('Hi!');
+
+			// Below is a function that is designed to receive two data entries, which
+			// will be stored as "x" and "y" in the function. The two variables could
+			// simply be separated with a comma.
+			function complexCalc (x, y) {
+				// Just some more complex calculations
+				let result = 0;
+				result = x * y;
+				// The "result" value calculated in the previous line is divided by
+				// the difference between x and y, and the output replaces the old
+				// "result" value.
+				result = result / (x - y);
+				// The "result" value calcualted in the previous line is multiplied by
+				// y and then minus x, and the output replaces the old "result" value.
+				result = result * y - x;
+				alert(result);
+			}
+
+			// Call the function and send two numeric values.
+			complexCalc(5, 4);
+		</script>
+	</head>
+	<body>
+		<h1>JavaScript Tutorials</h1>
+	</body>
+</html>

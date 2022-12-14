@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+     <head>
+     	<title>Example 12-2</title>
+     	<meta charset="utf-8">
+          <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+     	<script>
+     	
+     		function showMenuItems (event) {
+                    event.stopPropagation ();
+                    //$('div:not(:first-of-type').css('display', 'inline-block');
+                    let menuItems = $('div:not(:first-of-type');
+                    menuItems.each(
+                         function (index) {
+                              let item = menuItems.eq(index);
+                              setTimeout(function () {
+                                   item.css('display','inline-block');
+                              }, index * 1000);
+                         }
+                    );
+               }
+          
+               function hideMenuItems () {
+                    //$('div:not(:first-of-type').css('display', 'none');
+                    let menuItems = $('div:not(:first-of-type');
+                    menuItems.each(
+                         function (index) {
+                              let item = menuItems.eq(index);
+                              setTimeout(function () {
+                                   item.css('display','none');
+                              }, index * 1000);
+                         }
+                    );
+               }
+
+               window.onload = function () {
+                    $('div:first-of-type').on('click', showMenuItems);
+                    $(document).on('click', hideMenuItems);
+               };
+          </script>
+     	<style>
+     		div {
+     			display: inline-block;
+     			padding: 0;
+     			width: 100px;
+     			height: 100px;
+     			line-height: 100px;
+     			color: white;
+     			text-align: center;
+     		}
+     		div:first-of-type {
+     			background-color: darkred;
+     			cursor: pointer;
+     		}
+     		div:not(:first-of-type){
+     			display: none;
+     			background-color: darkblue;
+     		}
+     	</style>
+     </head>
+     <body>
+     	<div>Menu</div>
+     	<div>Item 1</div>
+     	<div>Item 2</div>
+     	<div>Item 3</div>
+     	<div>Item 4</div>
+     	<div>Item 5</div>
+     </body>
+     </html>
