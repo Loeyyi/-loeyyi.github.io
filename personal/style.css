@@ -45,15 +45,12 @@ a:active { background: #a2d2ff; }
   position: relative;
   width: 20px;
   height: 2px;
-  background: rgba(0, 0, 0, 0.87);
 }
 
 .navicon div:before,
 .navicon div:after {
   display: block;
-  content: "";
   width: 20px;
   height: 2px;
-  background: rgba(0, 0, 0, 0.87);
   position: absolute;
 }
