@@ -1,8 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
 body {
-  font-size: 6vh;  Roboto, sans-serif;
-   background: url(https://scontent.ftpe7-2.fna.fbcdn.net/v/t1.15752-9/310743519_425292429686816_641935641349062798_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=1OBplZXtwSYAX_52BiY&_nc_oc=AQkReq3LgbgyJna1QMnKawJcjc8dSiaKIRWqr66JgIW0Ko_NtfQeLQoRwunc--f-sO8u4xpVWe-1uEVmssO1rNPO&_nc_ht=scontent.ftpe7-2.fna&oh=03_AdTbSk32B8V_U8YX2f-mEoEZoHn-zg2qYa9zgbC9FnCj-A&oe=636E8FA4) 50% 50% no-repeat;
+  font: 100% Roboto, sans-serif;
+  background-color: black;
   background-size: cover;
+  padding: 50px;
+  margin: 0;
 }
 
 h2 {
