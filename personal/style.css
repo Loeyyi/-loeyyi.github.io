@@ -52,7 +52,7 @@ a:active { background: #a2d2ff; }
   display: block;
   line-height: 50px;
   padding: 0 20px;
-  color: inherit;
+  color: white;
   cursor: pointer;
 }
 
