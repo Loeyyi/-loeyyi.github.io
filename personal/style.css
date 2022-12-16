@@ -16,6 +16,9 @@ nav {
   color: rgba(0, 0, 0, 0.87);
 }
 
+nav:hover {
+  transition: ease-out;
+}
 
 a {
   font-size: 3.4vh;
