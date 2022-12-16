@@ -54,3 +54,7 @@ a:active { background: #a2d2ff; }
   height: 2px;
   position: absolute;
 }
+
+.navicon div:before { top: -7px; }
+
+.navicon div:after { top: 7px; }
