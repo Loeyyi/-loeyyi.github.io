@@ -15,28 +15,6 @@ nav {
   background: white;
 }
 
-nav:hover {
-  transition: ease-out;
-}
-
-a {
-  font-size: 3.4vh;
-  display: none;
-  position: absolute;
-  line-height: 50px;
-  padding: 0 20px;
-  color: inherit;
-  cursor: pointer;
-}
-
-a:hover {
-  font-size: 3.4vh;
-  display: block;
-  line-height: 50px;
-  padding: 0 20px;
-  color: inherit;
-  cursor: pointer;
-}
 
 a:hover { background: #bde0fe; }
 
@@ -49,6 +27,39 @@ a:active { background: #a2d2ff; }
   cursor: pointer;
 }
 
-.navicon:hover a{display: block}
 
 
+.btn {
+  background-color: #bde0fe;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.navicon {
+  position: relative;
+  display: inline-block;
+}
+.content {
+  display: none;
+  position: absolute;
+  background-color: #a2d2ff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.content a {
+  font-size: 3.4vh;
+  display: block;
+  line-height: 50px;
+  padding: 0 20px;
+  color: inherit;
+  cursor: pointer;
+}
+
+.content a:hover {background-color: #bde0fe;}
+.navicon:hover .content {display: block;}
+.navicon:hover .btn {background-color: #bde0fe;}
