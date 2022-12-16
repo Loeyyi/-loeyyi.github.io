@@ -13,7 +13,6 @@ h2 {
 nav {
   width: 300px;
   background: white;
-  color: rgba(0, 0, 0, 0.87);
 }
 
 nav:hover {
@@ -36,25 +35,6 @@ a:active { background: #a2d2ff; }
 .navicon {
   padding: 23px 20px;
   cursor: pointer;
-  -webkit-transform-origin: 32px 24px;
-  -ms-transform-origin: 32px 24px;
-  transform-origin: 32px 24px;
 }
 
-.navicon div {
-  position: relative;
-  width: 20px;
-  height: 2px;
-}
 
-.navicon div:before,
-.navicon div:after {
-  display: block;
-  width: 20px;
-  height: 2px;
-  position: absolute;
-}
-
-.navicon div:before { top: -7px; }
-
-.navicon div:after { top: 7px; }
