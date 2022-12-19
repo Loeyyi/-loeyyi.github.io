@@ -5,10 +5,33 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Example 15-2</title>
 	<style>
-		
+		nav{
+			height: 5vh;
+			background-color: red;
+			color: white;
+			font-family: sans-serif;
+		}
+		nav > div{
+			height: 5vh;
+			padding: 2px 10px;
+			text-align: center;
+			line-height: 5vh;
+		}
+		nav#desktopMenu > div {
+			display: inline-block;
+		}
 	</style>
 </head>
 <body>
-
+	<nav id="desktopMenu">
+		<div>Menu</div>
+		<div>Item 1</div>
+		<div>Item 2</div>
+	</nav>
+	<nav id="mobileMenu">
+		<div>Menu</div>
+		<div>Item 1</div>
+		<div>Item 2</div>
+	</nav>
 </body>
 </html>
