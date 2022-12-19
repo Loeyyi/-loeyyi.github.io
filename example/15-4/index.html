@@ -3,10 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Example 15-3</title>
+	<title>Example 15-4</title>
 	<style>
 		article {
 			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
 			background-color: darkblue;
 		}
 
@@ -15,7 +17,16 @@
 			padding: 10px;
 			background-color: orangered;
 			color: white;
-			align-content: center;
+		}
+
+		@media only screen and (min-width:1200px){
+			article{
+				flex-direction: row;
+			}
+
+			article > section{
+				width: initial;
+			}
 		}
 	</style>
 </head>
