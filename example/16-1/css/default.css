@@ -11,6 +11,9 @@ body {
 	min-height:  100%;
 	width:  100%;
 	overflow-x:  hidden;
+	font-family: Alegreya,Noto Serif TC, serif;
+	font-size: 3vh;
+	line-height: 4.5vh;
 }
 
 body > img#bg {
