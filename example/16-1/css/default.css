@@ -12,3 +12,8 @@ body {
 	width:  100%;
 	overflow-x:  hidden;
 }
+
+body > img#bg {
+	position: fixed;
+	z-index: -999;
+}
