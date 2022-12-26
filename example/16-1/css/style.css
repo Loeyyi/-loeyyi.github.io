@@ -31,3 +31,16 @@ body > img#bg {
 header, nav, div#backToTop {
 	font-family: Roboto Slab, Noto Sans TC, sans-serif;
 }
+
+header {
+	font-size: 6vh;
+	line-height: 10vh;
+	height: 10vh;
+	width: 60%;
+	text-align: center;
+	margin-left: 20%;
+}
+
+header > sub {
+	font-size: 50%;
+}
