@@ -80,3 +80,18 @@ article > section {
 	opacity: 0.6;
 	padding: 1vh 2vw;
 }
+
+article > section > figure {
+	max-width: 20%;
+}
+
+article > section:nth-of-type(odd) > figure{
+	float: left;
+}
+article > section:nth-of-type(even) > figure{
+	float: right;
+}
+
+article > section > figure > img {
+	width: 100%;
+}
