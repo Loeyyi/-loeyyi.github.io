@@ -22,3 +22,7 @@ body > img#bg {
 	width: 100%;
 	opacity: 0.2;
 }
+
+header, nav, div#backToTop {
+	font-family: Roboto Slab, Noto Sans TC, sans-serif;
+}
