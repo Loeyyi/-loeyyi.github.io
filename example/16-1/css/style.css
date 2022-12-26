@@ -79,6 +79,7 @@ article > section {
 	background-color: #f1ebe0;
 	opacity: 0.6;
 	padding: 1vh 2vw;
+	overflow: auto;
 }
 
 article > section > figure {
@@ -87,11 +88,79 @@ article > section > figure {
 
 article > section:nth-of-type(odd) > figure{
 	float: left;
+	margin: 1vh 2.5vw 0 0;
 }
 article > section:nth-of-type(even) > figure{
 	float: right;
+	margin: 1vh 0 0 2.5vw;
 }
 
 article > section > figure > img {
 	width: 100%;
+	border-radius: 1vh;
+}
+
+div#backToTop {
+	position: fixed;
+	left: 80%;
+	bottom: 10%;
+	background-color: #4d4d4d;
+	color: white;
+	padding: 0.5vh 1vw;
+	font-size: 70%;
+	opacity: 0.75;
+	cursor: pointer;
+	opacity: opacity 0.3s ease-in;
+	white-space: nowrap;
+	overflow-x: hidden;
+}
+
+div#backToTop:hover {
+	opacity: 1;
+	transition: opacity 0.5s ease-out;
+}
+
+@media only screen and(max-width:1200px){
+	body {
+		font-size: 2vh;
+		line-height: 3vh;
+	}
+
+	body > img#bg{
+		width: auto;
+		height: 100%;
+	}
+
+	header {
+		margin-left: 10%;
+		width: 80%;
+		font-size: 4.5vw;
+	}
+
+	nav{
+		margin-left: 10%;
+		width: 80%;
+	}
+
+	article{
+		padding: 1vh 10%;
+	}
+
+	article > section > figure{
+		width: 100%;
+	}
+
+	article > section:nth-of-type(odd) > figure{
+		float: initial;
+		margin: 1vh 0;
+	}
+	article > section:nth-of-type(even) > figure{
+		float: initial;
+		margin: 1vh 0;
+	}
+
+	article > section >figure > img {
+		width: 100%;
+		border-radius: 1vh;
+	}
 }
