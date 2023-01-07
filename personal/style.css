@@ -17,7 +17,8 @@ a:hover { background: #bde0fe; }
 a:active { background: #a2d2ff; }
 
 .navicon {
-  position: relative;
+  position:absolute;
+  z-index: 999;
   display: inline-block;
   padding: 23px 20px;
   cursor: pointer;
