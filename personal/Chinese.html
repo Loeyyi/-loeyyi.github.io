@@ -1,14 +1,84 @@
 <!DOCTYPE HTML>
 <html lang="en-us">
     <head>
-    	<title>Personal Website-English about bio</title>
+        <title>Personal Website-English about bio</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
-        <style type="text/css"></style>
+        <style type="text/css">
+       
+
+        body {
+        color: white;
+        font-size: 13px;
+        font-family: "Open Sans", "Helvetica Neue", sans-serif;
+        }
+
+        .header,
+        .introduction,
+        .questions, {
+            padding-left: 20vw;
+            padding-right: 20vw;
+         }
+    
+        .intro,
+        .name, {
+            text-align: center;
+        }
+
+        .introduction,
+        .questions {
+            max-width: 30vw;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .header {
+            padding: 15vh 0;
+            background-image: url('https://i.postimg.cc/MKBbr6mZ/image.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -999;
+        }
+
+        .intro {
+            margin-bottom: 10px;
+            color: #2b2d42;
+            font-family: "Gentium Book Basic", Georgia, serif;
+            font-size: 30px;
+        }
+
+        .name {
+            margin-top: 2vh;
+            color: #bde0fe;
+            font-family: "Open Sans", "Helvetica Neue", sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 100px;
+            text-transform: uppercase;
+            text-shadow: 0px 4px 1px #118ab2;
+        }
+
+        .heading {
+            max-width: 300px;
+            margin-top: 20px;
+        }
+
+        .question {
+            margin: 20px 0 10px 0;
+            color: #a2d2ff;
+            font-family: "Gentium Book Basic", Georgia, serif;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .answer {
+            margin-left: 0px;
+        }
+
+        </style>
     </head>
     <body>
       
-
         <nav>
             <div class="navicon">
                 <button class="btn">☰</button>
@@ -20,11 +90,29 @@
             </div>
         </div>
         </nav>
-        
+
         <article style="text-align: center; position: absolute; width: 100%; top: 50%; transform: translateY(-50%);">
-            <h2 style="color: #8d99ae;">
-               
-            </h2>
+            <header class="header">
+            <p class="intro">Hi, I'm</p> 
+            <h1 class="name">Loey!</h1>
+            </header>
+
+            <section class="introduction">
+            <h1 class="heading"></h1>
+            <p>嗨!我是 Loey（廖上儀）。我是一名在讀清華大學外國語言文學系，輔修經濟系的學生。我對動漫和電繪很有興趣； 因此，我努力將我對動漫的熱愛感帶入攝影和繪畫中。我的電繪作品在這個網站的Portfolio中。</p>
+            <p>在我的作品中，我喜歡將日本黑白漫畫風格與西方哥特式元素結合起來。雖然我創作的角色看起來有點詭異，但仔細一看，其實還是很可愛的！我覺得我的作品在某種程度上代表了我是誰。</p>
+            <p>我喜歡穿有很多蝴蝶結或荷葉邊和蕾絲的白色和黑色衣服或洋裝。也許是我的穿衣打扮，紋身和穿孔讓人覺得我是一個不好相處的人，但我有一顆真誠的心！ 雖然我不愛主動說話，但我願意和大家交朋友！</p>
+            </section>
+
+           <section class="questions">
+           <h1 class="heading">問答</h1>
+        <dl class="question-list">
+        <dt class="question">我最大的興趣是什麼?</dt>
+        <dd class="answer">我是一個超級動漫迷和御宅。 因此，不難想像我在空閒時間經常做什麼。 除了看動漫，我還喜歡追我喜歡的日本地下偶像團體（地下アイドル）和其他 ACG 樂團。我喜歡無時無刻聽他們的音樂，看他們表演。其實在2022年12月我一個人去了東京，主要是為了在澀谷一家叫O-EAST的live house看我最喜歡的團體之一的現場表演。通過看動漫和追日本偶像團體，我可以同時提升我的日語。因此，我想說我最大的興趣就是做一個動漫迷和御宅。</dd>
+        <dt class="question">我的夢想工作是什麼?</dt>
+        <dd class="answer">因為我特別喜歡藝術和另類的穿搭風格，所以我希望創建一個獨特的品牌，銷售特殊的化妝品和服裝。或者開全台灣最可愛的女僕咖啡廳也可以是我夢想的工作。畢竟，我的夢想工作最重要的條件就是我不必“穿著得體”去上班。</dd>
+        </dl>
+
         </article>
     </body>
 </html>
